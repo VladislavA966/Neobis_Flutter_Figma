@@ -48,10 +48,13 @@ class _GetOrderPageState extends State<GetOrderPage> {
             ),
             OrderTextField(
               hintText: TextFieldHint.phoneNumder,
-              prefix: Text(
-                '+996 ',
-                style: AppFonts.s16w400.copyWith(
-                  color: AppColors.textBlack,
+              prefix: Padding(
+                padding: const EdgeInsets.all(15),
+                child: Text(
+                  '+996 ',
+                  style: AppFonts.s16w400.copyWith(
+                    color: AppColors.textBlack,
+                  ),
                 ),
               ),
             ),

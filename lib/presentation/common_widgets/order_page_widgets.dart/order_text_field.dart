@@ -32,7 +32,7 @@ class OrderTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-          prefix: prefix,
+          prefixIcon: prefix,
           filled: true,
           fillColor: AppColors.bgTextField,
           hintText: getHintText(),
