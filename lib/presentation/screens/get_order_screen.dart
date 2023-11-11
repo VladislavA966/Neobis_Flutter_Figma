@@ -4,6 +4,7 @@ import 'package:neonis_fourth_week_app/domain/app_fonts/app_fonts.dart';
 import 'package:neonis_fourth_week_app/presentation/common_widgets/items_page_widget.dart/custom_text_field.dart';
 import 'package:neonis_fourth_week_app/presentation/common_widgets/items_page_widget.dart/yellow_button.dart';
 import 'package:neonis_fourth_week_app/presentation/common_widgets/order_page_widgets.dart/order_text_field.dart';
+import 'package:neonis_fourth_week_app/presentation/common_widgets/paying_page_widgets/summary_row_widget.dart';
 
 class GetOrderPage extends StatefulWidget {
   const GetOrderPage({super.key});
@@ -82,7 +83,30 @@ class _GetOrderPageState extends State<GetOrderPage> {
                 ),
               ],
             ),
-            const  Spacer(),
+            const Spacer(),
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SummaryRow(
+                  state: SummaryRowState.quantity,
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                SummaryRow(
+                  state: SummaryRowState.summ,
+                ),
+                SummaryRow(
+                  state: SummaryRowState.discount,
+                ),
+                SummaryRow(
+                  state: SummaryRowState.paid,
+                ),
+                SizedBox(
+                  height: 26,
+                ),
+              ],
+            ),
             YellowButton(
               buttonWidget: Text(
                 'Продолжить',
@@ -91,6 +115,9 @@ class _GetOrderPageState extends State<GetOrderPage> {
               height: 60,
               width: 380,
               onTap: null,
+            ),
+            SizedBox(
+              height: 30,
             ),
           ],
         ),

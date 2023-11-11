@@ -6,6 +6,7 @@ import 'package:neonis_fourth_week_app/presentation/common_widgets/main_screen_w
 import 'package:neonis_fourth_week_app/presentation/common_widgets/main_screen_widgets.dart/text_button.dart';
 import 'package:neonis_fourth_week_app/presentation/common_widgets/main_screen_widgets.dart/texts_column.dart';
 import 'package:neonis_fourth_week_app/presentation/common_widgets/main_screen_widgets.dart/toggle_switch.dart';
+import 'package:neonis_fourth_week_app/presentation/screens/items_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  FirstColumn(),
+                  const FirstColumn(),
                   IconButton(
                     onPressed: () {},
                     icon: const Icon(
@@ -116,7 +117,14 @@ class _MainScreenState extends State<MainScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomButton(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ItemsScreen(),
+                        ),
+                      );
+                    },
                     buttonType: ButtonType.Buy,
                   ),
                   CustomButton(
